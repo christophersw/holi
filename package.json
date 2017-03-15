@@ -1,0 +1,30 @@
+{
+  "name": "holi",
+  "version": "1.0.0",
+  "description": "A game based on color theory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christophersw/holi.git"
+  },
+  "author": "Christopher Webster",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/christophersw/holi/issues"
+  },
+  "homepage": "https://github.com/christophersw/holi#readme",
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "gulp-util": "^3.0.8",
+    "install": "^0.8.7",
+    "npm": "^4.4.1",
+    "tsify": "^3.0.1",
+    "typescript": "^2.2.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
+  }
+}
