@@ -1,4 +1,4 @@
-import { Color } from "./color";
+import { Color, ColorFromRGB} from "./color";
 
 export interface IGameBoard {
     paint(): void;
@@ -29,7 +29,7 @@ export class GameBoard implements IGameBoard {
         GameBoard.data = new Uint32Array(GameBoard.buf);
     }
 
-    private _drawPixel(x: number, y: number, color: Color): void {
+    private _drawPixel(x: number, y: number, color: Color): void {            
         GameBoard.data[y * GameBoard.canvasWidth + x] =
             (color.alpha << 24) |    // alpha
             (color.blue << 16) |    // blue
@@ -37,6 +37,10 @@ export class GameBoard implements IGameBoard {
             color.red;            // red
     }
 
+    private _getPixelColor(x: number, y: number){
+      let data = GameBoard.context.getImageData(x,y,1,1).data;
+      return ColorFromRGB(data[0],data[1],data[2]);
+    }
 
     private _drawCircleOutline(x, y, r, color) {
 

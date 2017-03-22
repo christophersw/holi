@@ -9,10 +9,10 @@ function main() {
         let x = Math.floor(Math.random() * (500 - 1) + 1);
         let y = Math.floor(Math.random() * (500 - 1) + 1);
         let r = Math.floor(Math.random() * (100 - 1) + 1);
-        GB.drawCircleFilled(x, y, r, RandomColor());
-        GB.drawCircleOutline(x, y, r, RandomColor());
+        GB.drawCircleFilled(x, y, r, RandomColor(null, 100, 50));
+        GB.drawCircleOutline(x, y, r, RandomColor(null, 100, 50));
         GB.paint();
-    }, 1);
+    }, 10);
 }
 
 window.onload = (e) => {
